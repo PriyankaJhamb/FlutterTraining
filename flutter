@@ -22,14 +22,14 @@ i3/i5 Processor
 dartpad.dev
 
 
-##Program for Water Bottle Sensor:
+## Program for Water Bottle Sensor:
 It has 3 operations--> 
 1. Update how much water we drank.
 2. Update if it is empty.
 3. Update if it is refilled.
 need to maintain the quantity in all 3 secenarios.
 
-```dart
+```
 void main() {
   //water measure in litres
   double threshold_value=7.5;
