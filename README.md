@@ -3,11 +3,11 @@ Flutter is an open-source UI software development kit created by Google. It is u
 
 ## Path of learning:
 
-Tour of Dart. 
-Flutter Widgets
-Assignments-->UI Replications
-Flutter and Firebase -->Multimedia and DB Operations
-Project Activity
+- Tour of Dart. 
+- Flutter Widgets
+- Assignments-->UI Replications
+- Flutter and Firebase -->Multimedia and DB Operations
+- Project Activity
 
 ## Initial Setup
  
