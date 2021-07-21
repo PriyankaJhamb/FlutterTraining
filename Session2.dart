@@ -19,12 +19,18 @@ print(y.toString());
 //String? name;//Due to this, memory will be saved as it will not allocate till we don't assign value.
 
 // variable.isEmpty()
-// String name="";
-String? name;
+ String name="";
+//String? name;//using, this error comes
 if (name.isEmpty)
 {
   print("Firstly fill the name.");
 }
 
+
+// Lazy Initialization
+late String response;
+//response = getNewsFromAPI();
+response="smartwork";
+print("name is: ${response}");
 
 }
