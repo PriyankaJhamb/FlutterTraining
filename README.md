@@ -10,7 +10,7 @@ Flutter and Firebase -->Multimedia and DB Operations
 Project Activity
 
 ## Initial Setup
- 
+
 1. JDk and its Path setup
 2. Android Studio
 3. Plugin-->FLutter in Android Studio
@@ -35,7 +35,7 @@ It has 3 operations-->
 3. Update if it is refilled.
 need to maintain the quantity in all 3 secenarios.
 
-```
+```dart
 void main() {
   //water measure in litres
   double threshold_value=7.5;
