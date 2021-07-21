@@ -1,5 +1,5 @@
 
-//  Program for Water Bottle Sensor:
+// // Program for Water Bottle Sensor:
 // It has 3 operations--> 
 // 1. Update how much water we drank.
 // 2. Update if it is empty.
@@ -53,5 +53,3 @@ void main() {
   }
   
 }
-
-
