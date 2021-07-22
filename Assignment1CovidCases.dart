@@ -1,5 +1,5 @@
 // https://www.covid19india.org/
-
+//CovidCases
 void main()
 {
 
@@ -16,14 +16,16 @@ void main()
   List statesvalues=states.values.toList();
   // print(stateskeys);
   // print(statesvalues);
-  print("#####States with number of cases are:#####");
+  print("#############################################################################################################################################");
+  print("\t\t\t\t\tStates with number of cases ");
+  print("#############################################################################################################################################");
   for(int i=0;i<statesvalues.length;i++)
   {
-    print("${stateskeys[i]}-->${statesvalues[i]}");
+    print("| \t ${stateskeys[i]} \t | \t ${statesvalues[i]} \t |");
   }
   List caseskeys=statesvalues[0].keys.toList();
   print("\n\n");
-  print("*****************");
+  print("****************************************************************************************************************************");
   print("Types of cases are : ${caseskeys}");
   for(int p=0;p<caseskeys.length;p++)
   {
@@ -35,6 +37,8 @@ void main()
   //Sorting starts
   int typeofcases=3;
   print("for the time being, typeofcases=${typeofcases}--> ${caseskeys[typeofcases]}");
+  print("******************************************************************************************************************************");
+  print("\n\n\n");
 
   for (int j=0;j<statesvalues.length;j++)
   {
@@ -55,44 +59,12 @@ void main()
       }
     }
   }
-  print("###########################");
-  print("After sorting according to the ${caseskeys[typeofcases]} cases in descending order.");
-  print("###########################");
+  print("#############################################################################################################################################");
+  print("\t\t\t\t\tAfter sorting according to the ${caseskeys[typeofcases]} cases in descending order.");
+  print("#############################################################################################################################################");
   for(int i=0;i<statesvalues.length;i++)
   {
-    print("${stateskeys[i]}-->${statesvalues[i]}");
+    print("| \t ${stateskeys[i]} \t | \t ${statesvalues[i]} \t |");
   }
 
 }
-/*
-
-#####States with number of cases are:#####
-Maharashtra-->{Confirmed: 6229596, Active: 94593, Recovered: 6000911, Deceased: 130753}
-Kerala-->{Confirmed: 3187716, Active: 126396, Recovered: 3045310, Deceased: 15512}Karanataka-->{Confirmed: 2886702, Active: 26256, Recovered: 2824197, Deceased: 36226}
-TamilNadu-->{Confirmed: 2539277, Active: 26717, Recovered: 2478778, Deceased: 33782}
-AndhraPradesh-->{Confirmed: 1946749, Active: 23939, Recovered: 1909613, Deceased: 13197}
-UttarPradesh-->{Confirmed: 1708005, Active: 1036, Recovered: 1684230, Deceased: 22739}
-
-
-
-*****************
-Types of cases are : [Confirmed, Active, Recovered, Deceased]
-Confirmed: 0
-Active: 1
-Recovered: 2
-Deceased: 3
-put variable typeofcases value to 0/1/2/3 according to what you need for sorting according to that cases.
-
-for the time being, typeofcases=3--> Deceased
-###########################
-After sorting according to the Deceased cases in descending order.
-###########################
-Maharashtra-->{Confirmed: 6229596, Active: 94593, Recovered: 6000911, Deceased: 130753}
-Karanataka-->{Confirmed: 2886702, Active: 26256, Recovered: 2824197, Deceased: 36226}
-TamilNadu-->{Confirmed: 2539277, Active: 26717, Recovered: 2478778, Deceased: 33782}
-UttarPradesh-->{Confirmed: 1708005, Active: 1036, Recovered: 1684230, Deceased: 22739}
-Kerala-->{Confirmed: 3187716, Active: 126396, Recovered: 3045310, Deceased: 15512}
-AndhraPradesh-->{Confirmed: 1946749, Active: 23939, Recovered: 1909613, Deceased: 13197}
-
-
-*/
