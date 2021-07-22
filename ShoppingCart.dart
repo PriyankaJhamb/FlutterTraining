@@ -22,7 +22,11 @@ void main()
     {
       shoppingCart.add(menu[choice]);
     }
-    
+    else 
+    {
+      print("Sorry ${menu[choice]} is not available for now.");
+    }
+
 
 
   }

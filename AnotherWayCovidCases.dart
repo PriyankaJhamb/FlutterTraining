@@ -1,9 +1,5 @@
-
-// material.IO
-// regex cheat Sheet
 // https://www.covid19india.org/
 //CovidCases
-import 'dart:io';
 void main()
 {
 
@@ -20,27 +16,14 @@ void main()
   List statesvalues=states.values.toList();
   // print(stateskeys);
   // print(statesvalues);
-  print("##############################################################################################################################");
+  print("#############################################################################################################################################");
   print("\t\t\t\t\tStates with number of cases ");
-  print("###############################################################################################################################");
-  stdout.write("| \t States \t |");
-  
-  List caseskeys=statesvalues[0].keys.toList();
-  for(int r=0;r<caseskeys.length;r++)
-  {
-    stdout.write(" \t\t ${[caseskeys[r]]} |");
-  }
-
+  print("#############################################################################################################################################");
   for(int i=0;i<statesvalues.length;i++)
   {
-    stdout.write("\n| \t ${stateskeys[i]} \t |");
-    for(int s=0;s<caseskeys.length;s++)
-    {
-    stdout.write(" \t\t ${statesvalues[i][caseskeys[s]]} |");
-    }
-    
+    print("| \t ${stateskeys[i]} \t | \t ${statesvalues[i]} \t |");
   }
-  
+  List caseskeys=statesvalues[0].keys.toList();
   print("\n\n");
   print("****************************************************************************************************************************");
   print("Types of cases are : ${caseskeys}");
@@ -52,7 +35,7 @@ void main()
   print("put variable typeofcases value to 0/1/2/3 according to what you need for sorting according to that cases.");
 
   //Sorting starts
-  int typeofcases=1;
+  int typeofcases=3;
   print("for the time being, typeofcases=${typeofcases}--> ${caseskeys[typeofcases]}");
   print("******************************************************************************************************************************");
   print("\n\n\n");
@@ -63,11 +46,12 @@ void main()
     {
       if (statesvalues[k][caseskeys[typeofcases]]<statesvalues[j][caseskeys[typeofcases]])
       {
-        
-        var temp=statesvalues[j];
-        statesvalues[j]=statesvalues[k];
-        statesvalues[k]=temp; 
-        
+        for(int m=0;m<caseskeys.length;m++)
+        {
+          int temp=statesvalues[j][caseskeys[m]];
+          statesvalues[j][caseskeys[m]]=statesvalues[k][caseskeys[m]];
+          statesvalues[k][caseskeys[m]]=temp; 
+        }
         
         String temp2=stateskeys[j];
         stateskeys[j]=stateskeys[k];
@@ -78,23 +62,9 @@ void main()
   print("#############################################################################################################################################");
   print("\t\t\t\t\tAfter sorting according to the ${caseskeys[typeofcases]} cases in descending order.");
   print("#############################################################################################################################################");
-  stdout.write("| \t States \t |");
-  
-  
-  for(int r=0;r<caseskeys.length;r++)
-  {
-    stdout.write(" \t\t ${[caseskeys[r]]} |");
-  }
-
   for(int i=0;i<statesvalues.length;i++)
   {
-    stdout.write("\n| \t ${stateskeys[i]} \t |");
-    for(int s=0;s<caseskeys.length;s++)
-    {
-    stdout.write(" \t\t ${statesvalues[i][caseskeys[s]]} |");
-    }
-    
+    print("| \t ${stateskeys[i]} \t | \t ${statesvalues[i]} \t |");
   }
-  
 
 }
