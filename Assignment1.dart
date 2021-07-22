@@ -9,7 +9,7 @@ void main()
   Map TamilNadu={'Confirmed': 2539277, 'Active':26717,'Recovered':2478778, 'Deceased':33782};
   Map AndhraPradesh={'Confirmed': 1946749, 'Active':23939,'Recovered':1909613, 'Deceased':13197};
   Map UttarPradesh={'Confirmed': 1708005, 'Active':1036,'Recovered':1684230, 'Deceased':22739};
-  var states={'Maharashtra': Maharashtra,'Kerala': Kerala, 'Karanataka': Karanataka, 'TamilNadu':TamilNadu};
+  var states={'Maharashtra': Maharashtra,'Kerala': Kerala, 'Karanataka': Karanataka, 'TamilNadu':TamilNadu, 'AndhraPradesh':AndhraPradesh,'UttarPradesh': UttarPradesh};
 
 
   List stateskeys=states.keys.toList();
