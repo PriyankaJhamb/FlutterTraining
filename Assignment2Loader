@@ -14,7 +14,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       home: Scaffold(
         body: Center(
-          child: Image.network('https://cdn.dribbble.com/users/702004/screenshots/2834791/material-loader.gif',
+          child: CircularProgressIndicator(),
 ),
         ),
       ),

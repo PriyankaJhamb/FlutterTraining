@@ -20,15 +20,15 @@ void main()
   List statesvalues=states.values.toList();
   // print(stateskeys);
   // print(statesvalues);
-  print("#############################################################################################################################################");
+  print("##############################################################################################################################");
   print("\t\t\t\t\tStates with number of cases ");
-  print("#############################################################################################################################################");
+  print("###############################################################################################################################");
   stdout.write("| \t States \t |");
   
   List caseskeys=statesvalues[0].keys.toList();
   for(int r=0;r<caseskeys.length;r++)
   {
-    stdout.write(" \t ${[caseskeys[r]]} \t |");
+    stdout.write(" \t\t ${[caseskeys[r]]} |");
   }
 
   for(int i=0;i<statesvalues.length;i++)
@@ -36,8 +36,9 @@ void main()
     stdout.write("\n| \t ${stateskeys[i]} \t |");
     for(int s=0;s<caseskeys.length;s++)
     {
-    stdout.write(" \t ${statesvalues[i][caseskeys[s]]} \t |");
+    stdout.write(" \t\t ${statesvalues[i][caseskeys[s]]} |");
     }
+    
   }
   
   print("\n\n");
@@ -78,18 +79,23 @@ void main()
   print("#############################################################################################################################################");
   print("\t\t\t\t\tAfter sorting according to the ${caseskeys[typeofcases]} cases in descending order.");
   print("#############################################################################################################################################");
+  stdout.write("| \t States \t |");
+  
   
   for(int r=0;r<caseskeys.length;r++)
   {
-    stdout.write(" \t ${[caseskeys[r]]} \t |");
+    stdout.write(" \t\t ${[caseskeys[r]]} |");
   }
+
   for(int i=0;i<statesvalues.length;i++)
   {
     stdout.write("\n| \t ${stateskeys[i]} \t |");
     for(int s=0;s<caseskeys.length;s++)
     {
-    stdout.write(" \t ${statesvalues[i][caseskeys[s]]} \t |");
+    stdout.write(" \t\t ${statesvalues[i][caseskeys[s]]} |");
     }
+    
   }
+  
 
 }
