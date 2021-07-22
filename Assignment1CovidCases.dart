@@ -1,6 +1,4 @@
 
-// material.IO
-// regex cheat Sheet
 // https://www.covid19india.org/
 //CovidCases
 import 'dart:io';
