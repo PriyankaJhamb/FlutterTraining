@@ -59,7 +59,7 @@ void main()
     }
   }
  
-  print("Your Shopping Cart contaings:");
+  print("Your Shopping Cart contains:");
 
   
   shoppingCart.forEach((element) 
@@ -103,10 +103,5 @@ void main()
     }
     print("Total Price is \u20b9 ${totalDiscountedPrice}");
   }
-  
-  
-
-
-  
   
 }
