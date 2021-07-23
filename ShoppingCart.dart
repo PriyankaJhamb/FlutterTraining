@@ -9,6 +9,35 @@ void main()
     'burger':{'title': "Chilli Burger",'price':332,'rating':3.4}
     };
   print("Menu-->${menu}");
+   List menuvalues=menu.values.toList();
+  List menukeys=menu.keys.toList();
+  print(menuvalues);
+  print(menukeys);
+  for(int i=0;i<menukeys.length;i++)
+  {
+    for(int j=i+1;j<menukeys.length;j++)
+    {
+      print(menuvalues[i]['rating']);
+        print(menuvalues[j]['rating']);
+      if(menuvalues[i]['rating']<menuvalues[j]['rating'])
+      {
+        
+        var temp;
+        temp=menuvalues[i];
+        menuvalues[i]=menuvalues[j];
+        menuvalues[j]=temp;
+
+        var temp1;
+        temp1=menukeys[i];
+        menukeys[i]=menukeys[j];
+        menukeys[j]=temp1;
+      }
+    }
+  }
+  print("After sorting menu list according to the rating in the descending order:");
+  menukeys.forEach((element) {print(element);});
+  menuvalues.forEach((element) {print(element);});
+
   List shoppingCart=[];
   int total=0;
   while (true)
@@ -38,37 +67,46 @@ void main()
     print(element);
   });
 
-  print("Total amount:${total}");
+  print("Total amount:\u20b9${total}");
 
-  List menuvalues=menu.values.toList();
-  List menukeys=menu.keys.toList();
-  print(menuvalues);
-  print(menukeys);
-  for(int i=0;i<menukeys.length;i++)
+  for(int i=0;i<shoppingCart.length;i++)
   {
-    for(int j=i+1;j<menukeys.length;j++)
+    for(int j=i+1;j<shoppingCart.length;j++)
     {
-      print(menuvalues[i]['rating']);
-        print(menuvalues[j]['rating']);
-      if(menuvalues[i]['rating']<menuvalues[j]['rating'])
+      print(shoppingCart[i]['rating']);
+        print(shoppingCart[j]['rating']);
+      if(shoppingCart[i]['rating']<shoppingCart[j]['rating'])
       {
         
         var temp;
-        temp=menuvalues[i];
-        menuvalues[i]=menuvalues[j];
-        menuvalues[j]=temp;
-
-        var temp1;
-        temp1=menukeys[i];
-        menukeys[i]=menukeys[j];
-        menukeys[j]=temp1;
+        temp=shoppingCart[i];
+        shoppingCart[i]=shoppingCart[j];
+        shoppingCart[j]=temp;
       }
-      print(menuvalues[i]['rating']);
-        print(menuvalues[j]['rating']);
-
     }
   }
-    print(menuvalues);
-  print(menukeys);
+  print("After sorting Shopping list according to the rating in the descending order:");
+  shoppingCart.forEach((element) {print(element);});
+  
+  String promocode="Hello";
+  if (promocode=="Hello")
+  {
+    print("After discount of \u20b9 30: ");
+    var discountedPrice=shoppingCart.map((e) => e['price']-30);
+    print(discountedPrice);
+    List priceList=discountedPrice.toList();
+    int totalDiscountedPrice=0;
+    for(int p=0;p<discountedPrice.length;p++)
+    {
+     
+     totalDiscountedPrice+=priceList[p];
+    }
+    print("Total Price is \u20b9 ${totalDiscountedPrice}");
+  }
+  
+  
+
+
+  
   
 }
