@@ -42,7 +42,7 @@ void main()
 
   for (int j=0;j<statesvalues.length;j++)
   {
-    for (int k=0; k<statesvalues.length;k++)
+    for (int k=j+1; k<statesvalues.length;k++)
     {
       if (statesvalues[k][caseskeys[typeofcases]]<statesvalues[j][caseskeys[typeofcases]])
       {
