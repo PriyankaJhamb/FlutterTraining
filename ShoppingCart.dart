@@ -4,12 +4,15 @@ import 'dart:io';
 void main()
 {
   Map menu={
-    'noodle':{'title': "Vegie Noodles",'price':344,'rating':4.5 }, 
+    'noodles':{'title': "Vegie Noodles",'price':344,'rating':4.5 }, 
     'maggie':{'title':"Vegiie maggie",'price':345, 'rating':3.3},
     'burger':{'title': "Chilli Burger",'price':332,'rating':3.4}
     };
   print("Menu-->${menu}");
-   List menuvalues=menu.values.toList();
+
+
+  //menuvalues rating sorting
+  List menuvalues=menu.values.toList();
   List menukeys=menu.keys.toList();
   print(menuvalues);
   print(menukeys);
@@ -34,6 +37,8 @@ void main()
       }
     }
   }
+
+  //After sorting 
   print("After sorting menu list according to the rating in the descending order:");
   menukeys.forEach((element) {print(element);});
   menuvalues.forEach((element) {print(element);});
@@ -58,17 +63,18 @@ void main()
       print("Sorry ${choice} is not available for now.");
     }
   }
- 
-  print("Your Shopping Cart contains:");
-
   
+
+  print("Your Shopping Cart contains:");
   shoppingCart.forEach((element) 
   {
     print(element);
   });
 
   print("Total amount:\u20b9${total}");
+  
 
+   //Shopping cart rating sorting
   for(int i=0;i<shoppingCart.length;i++)
   {
     for(int j=i+1;j<shoppingCart.length;j++)
@@ -88,8 +94,11 @@ void main()
   print("After sorting Shopping list according to the rating in the descending order:");
   shoppingCart.forEach((element) {print(element);});
   
-  String promocode="Hello";
-  if (promocode=="Hello")
+
+  String promocode1="PJ123";
+  String promocode2="VG123";
+  String promocode=promocode1;
+  if (promocode=="PJ123")
   {
     print("After discount of \u20b9 30: ");
     var discountedPrice=shoppingCart.map((e) => e['price']-30);
