@@ -1,8 +1,9 @@
-// material.IO
-// regex cheat Sheet
+
 
 // https://www.covid19india.org/
 //CovidCases
+
+
 import 'dart:io';
 void main()
 {
@@ -20,9 +21,9 @@ void main()
   List statesvalues=states.values.toList();
   // print(stateskeys);
   // print(statesvalues);
-  print("################################################################################################################################################");
+  print("#"*155);
   print("\t\t\t\t\tStates with number of cases ");
-  print("##############################################################################################################################################");
+  print("#"*155);
   
   List caseskeys=statesvalues[0].keys.toList();
     //formatting
@@ -104,7 +105,7 @@ void main()
     
   }
   print("\n\n");
-  print("****************************************************************************************************************************");
+  print("*"*155);
   print("Types of cases are : ${caseskeys}");
   for(int p=0;p<caseskeys.length;p++)
   {
@@ -116,7 +117,7 @@ void main()
   //Sorting starts
   int typeofcases=1;
   print("for the time being, typeofcases=${typeofcases}--> ${caseskeys[typeofcases]}");
-  print("******************************************************************************************************************************");
+  print("*"*155);
   print("\n\n\n");
 
 
@@ -139,9 +140,9 @@ void main()
       }
     }
   }
-  print("###################################################################################################################################");
+  print("#"*155);
   print("\t\t\t\t\tAfter sorting according to the ${caseskeys[typeofcases]} cases in descending order.");
-  print("#######################################################################################################################################");
+  print("#"*155);
   stdout.write("| \t States \t |");
   
   for(int r=0;r<caseskeys.length;r++)
@@ -186,4 +187,5 @@ void main()
     }
     
   }
+  print("\n"*3);
 }
