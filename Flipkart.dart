@@ -9,7 +9,7 @@ Users:seller,customer,developers,customerCarePersons,sponsors, deliveryman
 
 Sellers: name,shopname,contactnumber,sellerId,deliveredItems,Items,pendingItems,
 
-Item: ItemName,ItemCategory,ItemPrice,ItemDescription,ItemRating, ItemPicture,ItemCode, ItemDiscount
+Item: ItemName,ItemCategory,ItemPrice,ItemDescription,ItemRating, ItemPicture,ItemCode, ItemDiscount; Discount
 
 paymentmode:bank,cardpayment, netbanking, cashondelivery
 
@@ -27,7 +27,7 @@ class Item
     double? ItemRating;
     String? ItemCode;
     double? ItemDiscount;//in percent
-    double? DiscountedPrice;
+    double? ItemDiscountedPrice;
     Item({ItemName,ItemCategory,ItemPrice, ItemDescription, ItemRating, ItemCode, ItemDiscount})
     { 
       this.ItemName=ItemName;
@@ -37,7 +37,7 @@ class Item
       this.ItemRating=ItemRating;
       this.ItemCode=ItemCode; 
       this.ItemDiscount=ItemDiscount;
-      DiscountedPrice=ItemPrice-((ItemDiscount/ItemPrice)*100); }
+      ItemDiscountedPrice=ItemPrice-((ItemDiscount/ItemPrice)*100); }
 
     void showAboutItem()
     {
@@ -48,7 +48,7 @@ class Item
         print("Item Rating: ${ItemRating}");
         print("Item Code: ${ItemCode}");
         print("Item Discount: ${ItemDiscount}");
-        print("After Discount--> Price: ${DiscountedPrice}");
+        print("After Discount--> Price: ${ItemDiscountedPrice}");
     }
 
 }
