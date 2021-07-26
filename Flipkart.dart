@@ -37,7 +37,8 @@ class Item
       this.ItemRating=ItemRating;
       this.ItemCode=ItemCode; 
       this.ItemDiscount=ItemDiscount;
-      ItemDiscountedPrice=ItemPrice-((ItemDiscount/ItemPrice)*100); }
+      ItemDiscountedPrice=ItemPrice-((ItemDiscount/ItemPrice)*100); 
+    }
 
     void showAboutItem()
     {
