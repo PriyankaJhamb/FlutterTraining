@@ -9,7 +9,7 @@ Users:seller,customer,developers,customerCarePersons,sponsors, deliveryman
 
 Sellers: name,shopname,contactnumber,sellerId,deliveredItems,Items,pendingItems,
 
-Item: ItemName,ItemCategory,ItemPrice,ItemDescription,ItemRating, ItemPicture,ItemCode, ItemDiscount; ItemDiscountedPrice
+Item: ItemName,ItemCategory,ItemPrice,ItemDescription,ItemRating, ItemPicture,ItemCode, ItemDiscount, ItemDiscountedPrice;
 
 paymentmode:bank,cardpayment, netbanking, cashondelivery
 
